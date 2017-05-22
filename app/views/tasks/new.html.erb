@@ -1,7 +1,7 @@
 <h2>New Task</h2>
 
 <% if @task.errors.any? %>
-<h4>Oops something went wrong</h4>
+<h4>Oops something went wrong:</h4>
 	<ul>
 		<% @task.errors.full_messages.each do |msg| %>
 		<li><%= msg %></li>
@@ -15,3 +15,7 @@
 	<%= f.button :submit %>
 
 <% end %>
+
+<p>
+<%= link_to 'Go back to all tasks', tasks_path %>
+</p>
